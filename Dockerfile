@@ -4,8 +4,8 @@ FROM python:3.6
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-ENV http_proxy http://Yayun_Liu:Aaron90727*@10.143.18.126:80
-ENV https_proxy http://Yayun_Liu:Aaron90727*@10.143.18.126:80
+ENV http_proxy http://USERNAME:PASSWORD*@proxy.corp.com:80
+ENV https_proxy http://USERNAME:PASSWORD**@proxy.corp.com:80
 
 #RUN mkdir /app
 WORKDIR /app
@@ -17,8 +17,3 @@ RUN pip install -r requirements.txt
 
 # Now copy in our code, and run it
 COPY . /app
-#EXPOSE 8000
-
-#CMD ["python manage.py makemigrations"]
-#CMD ["python migrate"]
-#CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
